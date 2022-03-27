@@ -2,8 +2,6 @@ package tablecreator;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -183,10 +181,7 @@ public class TableCreator {
      */
     private void csvWritter(List<String> tableData, String filename) {
         if (filename != null) {
-            String homeDir = System.getProperty("user.home");
-            Path path = Paths.get(homeDir
-                    + "\\Kristjan-Marcus-Sulaoja-27.03.2022\\src\\csvfiles\\" + filename);
-            try (PrintWriter printWriter = new PrintWriter(path.toString())) {
+            try (PrintWriter printWriter = new PrintWriter(filename)) {
                 for (String line : tableData) {
                     printWriter.println(line);
                 }
@@ -209,7 +204,7 @@ public class TableCreator {
      * Activate the program.
      * @param args args
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         TableCreator tableCreator = new TableCreator();
         tableCreator.inputReader();
         tableCreator.createTable();
