@@ -4,8 +4,6 @@ Käsurearakendus, mille sisendiks on aastaarv ning väljundiks tabel, kus on val
 Java 17
 
 Käima panemine läbi CLI.
-Käsureal peab working directory olema src kaust. Peaks nägema välja umbes selline C:\Users\user\Kristjan-Marcus-Sulaoja-27.03.2022\src>
-Siis tuleb sisestada käsureale "java tablecreator.Tablecreator".
+Kaustas on sama nimeline jar file. Selle path tuleks copyda ning käsureale sisetada "java -jar jar\file\path".
 Peale seda läheb programm käima, ning kasutaja käest küsitakse aastaarvu.
-Peale aastaarvu sisestamist programm teeb csv faili, mille nimeks on sisestatud aastarv ning asukohaks on working directory ehk src kaust.
-
+Peale aastaarvu sisestamist programm teeb csv faili, mille sisu ja asukoht prinditakse ka käsureale. Faili nimeks on aastaarv ja asukohaks on working directory.
