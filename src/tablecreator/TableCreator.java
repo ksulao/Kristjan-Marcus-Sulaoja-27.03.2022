@@ -2,6 +2,7 @@ package tablecreator;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -185,6 +186,7 @@ public class TableCreator {
                 for (String line : tableData) {
                     printWriter.println(line);
                 }
+                System.out.println("Csv file path " + System.getProperty("user.dir") + "\\" + filename);
             } catch (IOException ex) {
                 System.out.println("Error creating csv file");
             }
